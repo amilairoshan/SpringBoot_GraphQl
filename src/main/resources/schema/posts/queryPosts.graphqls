@@ -1,0 +1,28 @@
+type Query {
+    allPosts :PostContentDTO
+    getPosts(PostId: Float!) :PostContentDTO
+    
+}
+
+type PostContentDTO {
+    statusCode:Int!
+    totalRecord:Int!
+    postList:[PostDTO]
+}
+
+type PostDTO {
+    id:Float
+    name:String
+    content:String
+    noOfLikes:Int
+    isDisplay:Boolean
+    comments:[PostCommentsDTO]
+}
+
+type PostCommentsDTO {
+    id:Float
+    comentContent:String
+}
+
+
+
